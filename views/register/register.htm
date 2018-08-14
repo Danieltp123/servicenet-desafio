@@ -7,44 +7,21 @@
     <meta name="author" content="Daniel Teixeira Patricio">
     <link rel="icon" href="../src/logo.ico">
 
-    <title>Login Page </title>
+    <title>Register Page </title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="login.css" rel="stylesheet">
+    <link href="register.css" rel="stylesheet">
   </head>
 
   <body class="text-center">
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '1102461733256409',
-            cookie     : true,
-            xfbml      : true,
-            version    : '{api-version}'
-          });
-            
-          FB.AppEvents.logPageView();   
-            
-        };
-        (function(d, s, id){
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) {return;}
-          js = d.createElement(s); js.id = id;
-          js.src = "https://connect.facebook.net/en_US/sdk.js";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
-
-
-
-    <form class="form-signin">
+    <form class="form-register">
       <img class="mb-4" src="../src/logomarca.png" alt="" width="300" height="150">
       <h1 class="h3 mb-3 font-weight-normal">Login</h1>
       <label for="inputNome" class="sr-only">Nome</label>
-      <input type="name" id="inputName" class="form-control" placeholder="Nome" required="" autofocus="">
+      <input type="nome" id="inputNome" class="form-control" placeholder="Nome" required="../src/logomarca.png" autofocus="">
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
       <label for="inputPassword" class="sr-only">Password</label>
@@ -55,8 +32,6 @@
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="" style="margin-bottom: 5px;margin-top: 5px; overflow: hidden; text-align: center; color: rgb(51, 51, 51); font-weight: bold;">Ou</p>
-      
       <p class="mt-5 mb-3 text-muted">© Daniel Teixeira Patricio-2018</p>
     </form>
   
