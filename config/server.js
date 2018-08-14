@@ -10,10 +10,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressValidator());
 
 consign()
-	.include('/routes')
+	.include('./routes')
 	.then('config/dbConnection.js')
-	.then('/models')
-	.then('/controllers')
+	.then('./models')
+	.then('./controllers')
 	.into(app);
 
 module.exports = app;
