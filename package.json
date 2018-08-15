@@ -1,5 +1,5 @@
 {
-  "name": "snet",
+  "name": "servicenet-desafio",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,10 +8,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Danieltp123/servicenet-desafio.git"
   },
   "private": true,
   "dependencies": {
@@ -25,7 +21,8 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
-    "http-server": "^0.11.1",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "rxjs": "^6.0.0",
     "zone.js": "~0.8.26"
   },
@@ -45,7 +42,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.0",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "protractor": "^5.4.0",
+    "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
