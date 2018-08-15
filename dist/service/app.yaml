@@ -13,5 +13,6 @@
 #
 # [START runtime]
 runtime: nodejs8
-
+handlers:
+  script: http-server -p 8080
 # [END runtime]
