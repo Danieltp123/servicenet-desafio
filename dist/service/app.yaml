@@ -13,7 +13,6 @@
 #
 # [START runtime]
 runtime: nodejs8
-"scripts": {
-  "start": "cd service && http-server -p 8080"
-}
+- url: /.*
+  script: cd service && http-server -p 8080
 # [END runtime]
