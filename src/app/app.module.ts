@@ -8,10 +8,17 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { RegisterUserComponent } from './register-user/register-user.component';
-import { DeleteUserComponent } from './delete-user/delete-user.component';
-import { UpdateUserComponent } from './update-user/update-user.component';
+
 import { RegisterUserService } from './register-user/register-user.service';
 import { HttpModule } from '@angular/http';
+
+// Import the AF2 Module
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+ 
+ 
+// AF2 Settings
 
 
 @NgModule({
@@ -20,8 +27,6 @@ import { HttpModule } from '@angular/http';
     LoginComponent,
     HomeComponent,
     RegisterUserComponent,
-    DeleteUserComponent,
-    UpdateUserComponent,
     
   ],
   imports: [
@@ -29,7 +34,9 @@ import { HttpModule } from '@angular/http';
     FormsModule,
     HttpModule,
     routing,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
   ],
   providers: [
     RegisterUserService

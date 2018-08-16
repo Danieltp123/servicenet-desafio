@@ -1,41 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { RegisterUserService } from './register-user.service';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-register-user',
   templateUrl: './register-user.component.html',
   styleUrls: ['../../bootstrap.min.css', './register-user.component.css']
 })
+
 export class RegisterUserComponent implements OnInit {
 
   name = '';
-  phone = '';
-  adress = '';
-  adrNumber = '';
-  zipCode = '';
-  city = '';
-  state = '';
-  country = '';
+  email = '';
+  password = '';
+
 
   constructor(
-    private _registerUserService: RegisterUserService
+    private _registerUserService: RegisterUserService,
+    public angularFireDataBase: AngularFireDatabase
   ) { }
 
   ngOnInit() { }
-
-  searchZipCode() {
-    this._registerUserService.getLocationZipCode(this.zipCode.replace(/(\-)/g, ''))
-      .subscribe(res => {
-
-        if (res.json()['erro'] !== true) {
-          this.state = res.json()['uf'];
-          this.city = res.json()['localidade'];
-          this.adress = res.json()['logradouro'];
-        }
-
-      }, err => {
-        console.log('fudeu');
-      });
+  register(){
+    
+    this.angularFireDataBase.list('user').push({
+      nome: this.name,
+      email: this.email,
+      password: this.password
+    })
   }
 
 }

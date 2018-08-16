@@ -24,12 +24,5 @@ export class HomeComponent implements OnInit {
     this._router.navigate(['/login']);
   }
 
-  navigateToUpdate() {
-    this._router.navigate(['/update']);
-  }
-
-  navigateToDelete() {
-    this._router.navigate(['/delete']);
-  }
 
 }

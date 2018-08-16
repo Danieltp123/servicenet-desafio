@@ -1,5 +1,8 @@
 {
   "hosting": {
-    "public": "src"
+    "public": "dist/servicenet-desafio"
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }

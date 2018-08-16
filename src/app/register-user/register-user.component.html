@@ -1,159 +1,30 @@
-<div class="container-fluid col-12 col-md-6">
+<div class="text-center container-fluid">
 
-  <h1 class="text-center">Cadastro</h1>
+    <form class="form-register">
+  
+      <img class="mb-4" 
+        src="./assets/img/logomarca.png" 
+        alt="" 
+        width="300" 
+        height="150">
+  
+      <h1 class="h3 mb-3 font-weight-normal">Register</h1>
 
-  <div class="input-group input-group-sm mb-3">
+      <label for="inputName" class="sr-only">Email address</label>
+      <input type="name" id="inputName" class="form-control" placeholder="Nome" required="" autofocus="" [(ngModel)]="name"  type="text">
+      
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" [(ngModel)]="email"   type="email">
 
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-sm">Nome</span>
-    </div>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" [(ngModel)]="password" required="">
 
-    <input class="form-control" 
-      [(ngModel)]="name"
-      aria-label="Sizing example input" 
-      aria-describedby="inputGroup-sizing-sm"
-      type="text">
-
+      <button class="btn btn-lg btn-primary btn-block" (click)="register()" type="submit">Register</button>
+  
+  
+      <p class="text-center mt-5 mb-3 text-muted">©2018 Daniel Teixeira Patricio</p>
+  
+    </form>
+  
   </div>
-
-  <div class="input-group input-group-sm mb-3">
-
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="inputGroup-sizing-sm">Telefone</span>
-    </div>
-
-    <input class="form-control"
-      mask="(000) 00000-0000"
-      [(ngModel)]="phone"
-      aria-label="Sizing example input" 
-      aria-describedby="inputGroup-sizing-sm"
-      type="text">
-
-  </div>
-
-  <div class="row">
-
-    <div class="col-7">
-
-      <div class="input-group input-group-sm mb-3">
-
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Endereço</span>
-        </div>
   
-        <input class="form-control" 
-          [(ngModel)]="adress"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
-      </div>
-
-    </div>
-
-    <div class="col-5">
-
-      <div class="input-group input-group-sm mb-3">
-
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Número</span>
-        </div>
-  
-        <input class="form-control" 
-          [(ngModel)]="adrNumber"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="number">
-  
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="row">
-
-    <div class="col-6">
-
-      <div class="input-group input-group-sm mb-3">
-
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Cep</span>
-        </div>
-  
-        <input class="form-control"
-          onblur="searchZipCode()"
-          mask="00000-000"
-          [(ngModel)]="zipCode"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
-      </div>
-
-    </div>
-
-    <div class="col-6">
-
-      <div class="input-group input-group-sm mb-3">
-
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">País</span>
-        </div>
-  
-        <input class="form-control" 
-          [(ngModel)]="country"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="row">
-
-    <div class="col-4">
-
-      <div class="input-group input-group-sm mb-3">
-
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Estado</span>
-        </div>
-  
-        <input class="form-control" 
-          [(ngModel)]="state"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
-      </div>
-
-    </div>
-
-    <div class="col-8">
-
-      <div class="input-group input-group-sm mb-3">
-
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Cidade</span>
-        </div>
-  
-        <input class="form-control" 
-          [(ngModel)]="city"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
-      </div>
-
-    </div>
-
-  </div>
-
-  <button class="btn btn-primary"
-    type="button">Cadastrar</button>
-
-</div>
