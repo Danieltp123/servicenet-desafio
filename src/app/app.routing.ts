@@ -3,16 +3,21 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { RegisterUserComponent } from './register-user/register-user.component';
+import { RegisterComponent } from './register/register.component';
 
 import { LoginComponent } from './login/login.component';
+import { CrudComponent } from './crud/crud.component';
+import { CreateComponent } from './create/create.component';
 
 const ROUTES: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: 'register', component: RegisterUserComponent},
+  { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
+  { path: 'crud', component: CrudComponent},
+  { path: 'create', component: CreateComponent},
   { path: '**', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(ROUTES);

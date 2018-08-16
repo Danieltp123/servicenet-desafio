@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterUserService {
+export class RegisterService {
+  
 
   constructor(
     private _http: Http
@@ -13,4 +15,5 @@ export class RegisterUserService {
   getLocationZipCode(zipCode) {
     return this._http.get(`https://viacep.com.br/ws/${zipCode}/json/`);
   }
+ 
 }

@@ -7,15 +7,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
-import { RegisterUserComponent } from './register-user/register-user.component';
+import { RegisterComponent } from './register/register.component';
 
-import { RegisterUserService } from './register-user/register-user.service';
+import { RegisterService } from './register/register.service';
 import { HttpModule } from '@angular/http';
 
 // Import the AF2 Module
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { CrudComponent } from './crud/crud.component';
+import { CreateComponent } from './create/create.component';
  
  
 // AF2 Settings
@@ -26,8 +28,9 @@ import { environment } from '../environments/environment';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RegisterUserComponent,
-    
+    RegisterComponent,
+    CrudComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,11 +38,11 @@ import { environment } from '../environments/environment';
     HttpModule,
     routing,
     NgxMaskModule.forRoot(),
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.config),
     AngularFireDatabaseModule,
   ],
   providers: [
-    RegisterUserService
+    RegisterService
   ],
   bootstrap: [AppComponent]
 })
