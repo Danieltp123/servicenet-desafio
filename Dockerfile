@@ -1,5 +1,4 @@
-FROM alpine: latest
-MAINTAINER sarishinohara
+
 
 # update alpine linux
 RUN apk atualização e atualização apk && \
