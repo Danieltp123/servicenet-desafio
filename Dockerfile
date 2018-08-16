@@ -2,6 +2,7 @@ FROM launcher.gcr.io/google/nodejs
 
 # Install node.js 4.6.1
 RUN npm install -g n
+RUN n stable
 
 ADD . /servicenet-desafio
 WORKDIR /servicenet-desafio
