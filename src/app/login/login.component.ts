@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['../../bootstrap.min.css','./login.component.css',]
 })
 export class LoginComponent implements OnInit {
 
@@ -11,5 +11,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  login(){
+    console.log("Blz logou");
+  }
 }

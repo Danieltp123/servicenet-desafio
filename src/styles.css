@@ -2,11 +2,13 @@ html,
 body {
   height: 100%;
 }
+html,
 body {
-    display: -ms-flexbox;
-    -ms-flex-align: center;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: white;
-  }
+  height: 100%;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+
