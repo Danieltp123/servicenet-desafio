@@ -13,6 +13,6 @@ WORKDIR /servicenet-desafio
 
 
 # Install dependencies.
-RUN npm --unsafe-perm install
-RUN npm install -g @angular
+RUN npm install
+RUN npm install -g angular
 RUN ng serve --port 8080
