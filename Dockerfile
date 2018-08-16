@@ -1,6 +1,7 @@
 FROM launcher.gcr.io/google/nodejs
 
 # Install node.js 4.6.1
+RUN npm cache clean -f
 RUN npm install -g n
 RUN n stable
 
