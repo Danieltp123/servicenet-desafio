@@ -14,5 +14,5 @@ WORKDIR /servicenet-desafio
 
 # Install dependencies.
 RUN npm install
-RUN npm install -g angular
+RUN npm install -g @angular/cli
 RUN ng serve --port 8080
