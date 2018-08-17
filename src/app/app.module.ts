@@ -19,8 +19,7 @@ import { environment } from '../environments/environment';
 import { CrudComponent } from './crud/crud.component';
 import { CreateComponent } from './create/create.component';
 import { ReadComponent } from './read/read.component';
-import { UpdateComponent } from './update/update.component';
-import { DeleteComponent } from './delete/delete.component';
+
 import { CreateService } from './create/create.service';
  
  
@@ -36,8 +35,6 @@ import { CreateService } from './create/create.service';
     CrudComponent,
     CreateComponent,
     ReadComponent,
-    UpdateComponent,
-    DeleteComponent,
   ],
   imports: [
     BrowserModule,
