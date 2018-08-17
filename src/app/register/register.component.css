@@ -29,3 +29,9 @@
       border-top-left-radius: 0;
       border-top-right-radius: 0;
   }
+  .or{
+    margin-top: 25px;
+    text-align: center;
+     color: rgb(51, 51, 51);
+      font-weight: bold;
+  }

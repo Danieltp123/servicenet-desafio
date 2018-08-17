@@ -52,7 +52,7 @@
     <div class="col-6">
       <div class="input-group input-group-sm mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Cep</span>
+          <span class="input-group-text" id="inputGroup-sizing-sm">CEP</span>
         </div>
         <input class="form-control" (blur)="searchZipCode()" mask="00000-000" [(ngModel)]="locale.zipCode" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
       </div>
@@ -86,6 +86,7 @@
   </div>
   <button class="btn btn-lg btn-primary btn-block" 
   (click)="create()"
-  type="submit">Criar Usuario</button>
+  type="submit">Cadastrar Cliente</button>
   <p class="text-center mt-5 mb-3 text-muted">©2018 Daniel Teixeira Patricio</p>
 </div>
+

@@ -1,5 +1,5 @@
 import { Component, OnInit, Testability } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router } from '@angular/router';import { RegisterService } from './register.service';
 import { RegisterService } from './register.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 
@@ -41,4 +41,17 @@ export class RegisterComponent implements OnInit {
         window.alert(errorCode);
     })
   }
-} 
+  facebook(){
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithPopup(provider).then((user) =>{
+      this._router.navigate(['crud']);
+        console.log("logou")
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorMessage);
+      console.log(error);
+    });
+  }
+}
