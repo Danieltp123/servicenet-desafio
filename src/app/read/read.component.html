@@ -1,6 +1,39 @@
-<h1>Lista de pessoas:</h1>
-<ul>
-<li *ngFor="let p of client| async">
-{{ p.name + p.phone}}
-</li>
-</ul>
+<div class="container-fluid col-12 col-md-6 text-center">
+        <img class="mb-4" 
+        src="./assets/img/logomarca.png" 
+        alt="" 
+        width="300" 
+        height="150">
+      <h1 class="h3 mb-3 font-weight-normal">Visualizar/Editar/apagar clientes:</h1>
+
+        <ul>
+        <li *ngFor="let cliente of (clientes | async)" >
+                <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"  id="inputGroup-sizing-sm">Nome</span>
+                        </div>
+                        <input class="form-control" 
+                            #updatename text='(cliente.name)'
+                          aria-label="Sizing example input" 
+                          aria-describedby="inputGroup-sizing-sm"
+                          type="text">
+                      </div>
+                      <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroup-sizing-sm">Telefone</span>
+                        </div>
+                        <input class="form-control"
+                          mask="(000) 00000-0000"
+                           #updatephone
+                          aria-label="Sizing example input" 
+                          aria-describedby="inputGroup-sizing-sm"
+                          type="text" text='(cliente.phone)'>
+                      </div>
+                      
+                   <button (click)="updateItem(cliente.$key,updatename.value,updatephone.value)">Update</button>
+                 <button (click)="deleteItem(cliente.$key)">Delete</button>
+        </li>
+      </ul>
+
+</div>
+          
