@@ -13,6 +13,7 @@ import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 
 
+
 const ROUTES: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'crud', component: CrudComponent},

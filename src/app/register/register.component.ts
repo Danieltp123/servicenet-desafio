@@ -1,6 +1,5 @@
 import { Component, OnInit, Testability } from '@angular/core';
-import { Router } from '@angular/router';import { RegisterService } from './register.service';
-import { RegisterService } from './register.service';
+import { Router } from '@angular/router';
 import { AngularFireDatabase } from 'angularfire2/database';
 
 

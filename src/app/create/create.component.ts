@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterService } from '../register/register.service';
+
 import { AngularFireDatabase } from 'angularfire2/database';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
+import { CreateService } from './create.service';
 
 @Component({
   selector: 'app-create',
@@ -34,7 +35,7 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
   }
   searchZipCode() {
-    this._registerService.getLocationZipCode(this.locale.zipCode.replace('-', ''))
+    this._createService.getLocationZipCode(this.locale.zipCode.replace('-', ''))
       .subscribe(res => {
         console.log(res.json());
         this.locale.adress = res.json()['logradouro'];

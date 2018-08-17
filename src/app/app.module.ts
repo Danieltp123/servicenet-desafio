@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { routing } from './app.routing';
 import { RegisterComponent } from './register/register.component';
 
-import { RegisterService } from './register/register.service';
+
 import { HttpModule } from '@angular/http';
 
 // Import the AF2 Module
@@ -21,6 +21,7 @@ import { CreateComponent } from './create/create.component';
 import { ReadComponent } from './read/read.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
+import { CreateService } from './create/create.service';
  
  
 // AF2 Settings
@@ -48,7 +49,7 @@ import { DeleteComponent } from './delete/delete.component';
     AngularFireDatabaseModule,
   ],
   providers: [
-    RegisterService
+    CreateService
   ],
   bootstrap: [AppComponent]
 })
