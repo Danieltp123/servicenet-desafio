@@ -4,158 +4,87 @@
     alt="" 
     width="300" 
     height="150">
-    <h1 class="h3 mb-3 font-weight-normal">Cadastrar Cliente</h1>
-
+  <h1 class="h3 mb-3 font-weight-normal">Cadastrar Cliente</h1>
   <div class="input-group input-group-sm mb-3">
-
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-sm">Nome</span>
     </div>
-
     <input class="form-control" 
-      [(ngModel)]="name"
+      [(ngModel)]="cliente.name"
       aria-label="Sizing example input" 
       aria-describedby="inputGroup-sizing-sm"
       type="text">
-
   </div>
-
   <div class="input-group input-group-sm mb-3">
-
     <div class="input-group-prepend">
       <span class="input-group-text" id="inputGroup-sizing-sm">Telefone</span>
     </div>
-
     <input class="form-control"
-      mask="(00) 00000-0000"
-      [(ngModel)]="phone"
+      mask="(000) 00000-0000"
+      [(ngModel)]="cliente.phone"
       aria-label="Sizing example input" 
       aria-describedby="inputGroup-sizing-sm"
       type="text">
-
   </div>
-
   <div class="row">
-
     <div class="col-7">
-
       <div class="input-group input-group-sm mb-3">
-
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">Endereço</span>
         </div>
-        <input class="form-control" 
-          [(ngModel)]="adress"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
+        <input class="form-control" [(ngModel)]="locale.adress" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
       </div>
     </div>
-
     <div class="col-5">
-
       <div class="input-group input-group-sm mb-3">
-
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">Número</span>
         </div>
-  
         <input class="form-control" 
           [(ngModel)]="adrNumber"
           aria-label="Sizing example input" 
           aria-describedby="inputGroup-sizing-sm"
           type="number">
-  
       </div>
-
     </div>
-
   </div>
-
   <div class="row">
-
     <div class="col-6">
-
       <div class="input-group input-group-sm mb-3">
-
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">Cep</span>
         </div>
-  
-        <input class="form-control"
-          onblur="searchZipCode()"
-          mask="00000-000"
-          [(ngModel)]="zipCode"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
+        <input class="form-control" (blur)="searchZipCode()" mask="00000-000" [(ngModel)]="locale.zipCode" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
       </div>
-
     </div>
-
     <div class="col-6">
-
       <div class="input-group input-group-sm mb-3">
-
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">País</span>
         </div>
-  
-        <input class="form-control" 
-          [(ngModel)]="country"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
+        <input class="form-control" [(ngModel)]="locale.country" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
       </div>
-
     </div>
-
   </div>
-
   <div class="row">
-
     <div class="col-4">
-
       <div class="input-group input-group-sm mb-3">
-
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">Estado</span>
         </div>
-  
-        <input class="form-control" 
-          [(ngModel)]="state"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
+        <input class="form-control" [(ngModel)]="locale.state" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"          type="text">
       </div>
-
     </div>
-
     <div class="col-8">
-
       <div class="input-group input-group-sm mb-3">
-
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-sm">Cidade</span>
         </div>
-  
-        <input class="form-control" 
-          [(ngModel)]="city"
-          aria-label="Sizing example input" 
-          aria-describedby="inputGroup-sizing-sm"
-          type="text">
-  
+        <input class="form-control" [(ngModel)]="locale.city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
       </div>
-
     </div>
-
   </div>
-
   <button class="btn btn-lg btn-primary btn-block" 
-  (click)="tests()"
-  type="submit">Entrar Usuario</button>
-
+  (click)="create()"
+  type="submit">Criar Usuario</button>
 </div>

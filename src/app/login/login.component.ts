@@ -48,4 +48,19 @@ export class LoginComponent implements OnInit {
         console.log(error);
     });
   }
+
+  facebook(){
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithPopup(provider).then((user) =>{
+      this._router.navigate(['crud']);
+        console.log("logou")
+    }).catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert(errorMessage);
+      console.log(error);
+    });
+
+  }
 }
