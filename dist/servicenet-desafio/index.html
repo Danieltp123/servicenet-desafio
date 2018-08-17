@@ -26,8 +26,30 @@
     <script src="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.1.1/firebaseui.css" />
 
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1102461733256409',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v3.1'
+        });
+          
+        FB.AppEvents.logPageView();   
+          
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        https://connect.facebook.net/pt_BR/sdk.js;
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 
   <body class="text-center">
       <app-root></app-root>
-  <script type="text/javascript" src="runtime.06daa30a2963fa413676.js"></script><script type="text/javascript" src="polyfills.f6ae3e8b63939c618130.js"></script><script type="text/javascript" src="main.3c33ffc250594b6e26b5.js"></script></body>
+  <script type="text/javascript" src="runtime.06daa30a2963fa413676.js"></script><script type="text/javascript" src="polyfills.f6ae3e8b63939c618130.js"></script><script type="text/javascript" src="main.b39e7551dda68a738c12.js"></script></body>
 </html>

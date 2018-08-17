@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-update',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
+  _router: any;
 
-  constructor() { }
+  constructor() { 
+    var user = firebase.auth().currentUser;
+    if (!user) {
+     this._router.navigate(['/']);
+    }
+  }
 
   ngOnInit() {
   }

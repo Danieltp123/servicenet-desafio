@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RegisterService } from '../register/register.service';
 import {  AngularFireDatabase } from 'angularfire2/database';
 import {  Router } from '@angular/router';
+import * as firebase from 'firebase';
 
 
 
@@ -32,7 +33,12 @@ export class CreateComponent implements OnInit {
     private _registerService: RegisterService,
     private angularFire: AngularFireDatabase,
     private _router: Router
-  ) {}
+  ) {
+    var user = firebase.auth().currentUser;
+    if (!user) {
+     this._router.navigate(['/']);
+    }
+  }
 
   ngOnInit() {
   }
@@ -50,9 +56,9 @@ export class CreateComponent implements OnInit {
       });
   }
   create(){
-    this.angularFire.list("Client").push({
-      nome: this.cliente.name,
-      telefone: this.cliente.phone,
+    this.angularFire.list("client").push({
+      name: this.cliente.name,
+      phone: this.cliente.phone,
       adress: this.locale.adress,
       zipCode: this.locale.zipCode,
       country: this.locale.country,
@@ -63,6 +69,7 @@ export class CreateComponent implements OnInit {
       console.log("dados gravados:"+t.key)
       this._router.navigate(['cruds']);
     });   
+    this.angularFire.list("client").
     
   }
 }

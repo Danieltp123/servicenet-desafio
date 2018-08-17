@@ -15,12 +15,12 @@ import { DeleteComponent } from './delete/delete.component';
 
 const ROUTES: Routes = [
   { path: 'home', component: HomeComponent},
+  { path: 'crud', component: CrudComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   { path: 'read', component: ReadComponent},
   { path: 'update', component: UpdateComponent},
-  { path: 'delete', component: DeleteComponent}
-  { path: 'crud', component: CrudComponent},
+  { path: 'delete', component: DeleteComponent},
   { path: 'create', component: CreateComponent},
   { path: '**', component: HomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

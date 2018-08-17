@@ -1,3 +1,6 @@
-<p>
-  read works!
-</p>
+<h1>Lista de pessoas:</h1>
+<ul>
+<li *ngFor="let p of client| async">
+{{ p.name + p.phone}}
+</li>
+</ul>
