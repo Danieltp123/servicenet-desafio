@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "src"
+    "default": "src",
+    "ng serve": "servicenet-desafio1",
+    "my-staging-project": "servicenet-desafio",
+    " ": "servicenet-desafio1"
   }
 }

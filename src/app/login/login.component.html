@@ -14,7 +14,7 @@
       <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}" >
 
       <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" [(ngModel)]="user.password" required="" [ngModelOptions]="{standalone: true}">
+      <input type="password" id="inputPassword" requerid class="form-control" placeholder="Password" [(ngModel)]="user.password" required="" [ngModelOptions]="{standalone: true}">
 
       <button class="btn btn-lg btn-primary btn-block" (click)="login()"  type="submit">Login</button>
       

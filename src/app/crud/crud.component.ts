@@ -12,10 +12,7 @@ export class CrudComponent implements OnInit {
 
   constructor(private _router: Router
   ) { 
-    var user = firebase.auth().currentUser;
-    if (!user) {
-     this._router.navigate(['/']);
-    }
+    
   }
 
   ngOnInit() {
