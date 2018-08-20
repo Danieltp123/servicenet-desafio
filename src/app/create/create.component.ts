@@ -45,18 +45,23 @@ export class CreateComponent implements OnInit {
       });
   }
   create() {
-    this.angularFire.list("client").push({
-      name: this.cliente.name,
-      phone: this.cliente.phone,
-      adress: this.locale.adress,
-      zipCode: this.locale.zipCode,
-      country: this.locale.country,
-      state: this.locale.state,
-      city: this.locale.city,
-      adrNumber: this.locale.adrNumber
-    }).then((t: any) => {
-      window.open('https://www.google.com/maps/search/?api=1&query=' + this.locale.city + '+' + this.locale.state + '+' + this.locale.zipCode);
+    var ref =this.angularFire.list("client");
+
+
+    ref.push({}).then((t: any) => {
+      window.open('https://www.google.com/maps/search/?api=1&query=' + this.locale.city + '+' + this.locale.state + '+' + this.locale.zipCode+ '+' + this.locale.adress+ '+' + this.locale.adrNumber);
       console.log("dados gravados:" + t.key);
+      ref.set(t.key, { 
+        key: t.key,
+        name: this.cliente.name,
+        phone: this.cliente.phone,
+        adress: this.locale.adress,
+        zipCode: this.locale.zipCode,
+        country: this.locale.country,
+        state: this.locale.state,
+        city: this.locale.city,
+        adrNumber: this.locale.adrNumber
+       });
       this._router.navigate(['cruds']);
     });
   }

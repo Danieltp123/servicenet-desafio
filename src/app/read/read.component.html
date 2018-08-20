@@ -1,14 +1,101 @@
 <div class="container-fluid col-12 col-md-6 text-center">
-        <img class="mb-4" 
-        src="./assets/img/logomarca.png" 
-        alt="" 
-        width="300" 
-        height="150">
-      <h1 class="h3 mb-3 font-weight-normal">Visualizar/Editar/Apagar clientes:</h1>
-          <tr *ngFor="let cliente of clientes">
-            <td>{{cliente}</td>
-          </tr>
+    <img class="mb-4" 
+    src="./assets/img/logomarca.png" 
+    alt="" 
+    width="300" 
+    height="150">
+  <h1 class="h3 mb-3 font-weight-normal">Visualizar/Editar/Apagar clientes:</h1>
 
-
-</div>
-          
+      <tr *ngFor="let cliente of clientes | async">
+       <div class="input-group input-group-sm mb-3">
+          <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Nome</span>
+              </div>
+              <input class="form-control" 
+                [(ngModel)]="cliente.name"
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-sm"
+                type="text">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Telefone</span>
+              </div>
+              <input class="form-control"
+                mask="(000) 00000-0000"
+                [(ngModel)]="cliente.phone"
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-sm"
+                type="text">
+            </div>
+            <div class="row">
+              <div class="col-7">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Endereço</span>
+                  </div>
+                  <input class="form-control" [(ngModel)]="cliente.adress" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Número</span>
+                  </div>
+                  <input class="form-control" 
+                    [(ngModel)]="cliente.adrNumber"
+                    aria-label="Sizing example input" 
+                    aria-describedby="inputGroup-sizing-sm"
+                    type="number">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">CEP</span>
+                  </div>
+                  <input class="form-control"  mask="00000-000" [(ngModel)]="cliente.zipCode" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">País</span>
+                  </div>
+                  <input class="form-control" [(ngModel)]="cliente.country" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Estado</span>
+                  </div>
+                  <input class="form-control" [(ngModel)]="cliente.state" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Cidade</span>
+                  </div>
+                  <input class="form-control" [(ngModel)]="cliente.city" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" type="text">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6"><button class="btn btn-lg btn-success btn-block" 
+                (click)="updateCliente(cliente)"
+                type="submit">Atualizar Cliente</button></div>
+              <div class="col-6"><button class="btn btn-lg btn-danger btn-block mb-3" 
+                (click)="deleteCliente(cliente)"
+                type="submit">Deletar Cliente</button></div>
+            </div>
+           </div>
+        </tr>
+  </div>
+        
