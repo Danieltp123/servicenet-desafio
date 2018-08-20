@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <base href="/src">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.ico">
+    <title>Servicenet Desafio</title>
+
+
+
+    <!-- Bootstrap core CSS -->
+   <link href="bootstrap.min.css" rel="stylesheet">
+   <!-- Custom styles for this template -->
+   <link href="styles.css" rel="stylesheet">
+   <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1102461733256409',
+          cookie     : true,
+          xfbml      : true,
+          version    : 'v3.1'
+        });
+          
+        FB.AppEvents.logPageView();   
+          
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        https://connect.facebook.net/pt_BR/sdk.js;
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+  <link rel="stylesheet" href="styles.5bb7db06ab5519f51bc1.css"></head>
+  <body class="text-center">
+      <app-root></app-root>
+  <script type="text/javascript" src="runtime.06daa30a2963fa413676.js"></script><script type="text/javascript" src="polyfills.f6ae3e8b63939c618130.js"></script><script type="text/javascript" src="main.b6df7ac9d6dd129f5ac2.js"></script></body>
+</html>
